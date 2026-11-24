@@ -37,7 +37,9 @@ export default function LoginPage() {
           <p className="login-brand__description">连接课程、成员与每一段学习进程。</p>
           <div className="login-art" aria-hidden="true">
             <div className="login-art__orbit" />
-            <div className="login-art__tile"><span className="login-art__cap" /></div>
+            <div className="login-art__tile">
+              <span className="login-art__cap"><span className="login-art__tassel" /></span>
+            </div>
           </div>
         </div>
         <p className="login-brand__caption">卓越医学工程师协会 · 综合管理后台</p>
@@ -46,6 +48,7 @@ export default function LoginPage() {
       <section className="login-panel" aria-labelledby="login-title">
         <div className="login-panel__content">
           <header className="login-panel__header">
+            <span className="login-panel__welcome">欢迎回来</span>
             <h1 id="login-title">登录综合管理后台</h1>
             <p>请使用独立的管理员账号登录。</p>
           </header>
@@ -72,10 +75,8 @@ export default function LoginPage() {
               <Input.Password
                 placeholder="请输入密码"
                 autoComplete="current-password"
-                iconRender={(visible) => <span className="login-password-toggle">{visible ? '隐藏' : '显示'}</span>}
               />
             </Form.Item>
-            <p className="login-panel__hint">账号由协会统一管理</p>
             <Button type="primary" htmlType="submit" autoInsertSpace={false} block>登录</Button>
             {submitted && (
               <Alert
